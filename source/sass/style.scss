@@ -1,4 +1,9 @@
-ul {
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: red;
-}
+@import "font.scss";
+@import "variabless.scss";
+@import "global.scss";
+@import "blocks/ui-kit/inputs.scss";
+@import "blocks/ui-kit/buttons.scss";
+@import "blocks/header.scss";
+@import "blocks/advantages.scss";
+@import "blocks/intro-form.scss";
+@import "blocks/nav.scss";
