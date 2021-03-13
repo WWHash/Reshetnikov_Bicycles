@@ -3,10 +3,9 @@
 }
 
 .page-body {
-  max-width: 1440px;
-  min-width: 769px;
+  min-width: 320px;
   min-height: 100%;
-  margin: 0 auto;
+  margin: 0;
   font-family: $font;
   background-color: $white;
 }
@@ -30,11 +29,18 @@ img {
 }
 
 .container {
-  box-sizing: border-box;
-  min-width: 1024px;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 280px;
   padding-right: 280px;
+  box-sizing: border-box;
+}
+
+@media (max-width: $tablet-width) {
+  .container {
+    width: $tablet-width;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

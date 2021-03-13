@@ -7,3 +7,9 @@
   border-radius: 6px;
   box-sizing: border-box;
 }
+//tablet
+@media (max-width: $tablet-width) {
+  .input {
+    padding: 11px 22px;
+  }
+}

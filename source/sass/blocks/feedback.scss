@@ -1,0 +1,44 @@
+.feedback__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 98px;
+  list-style: none;
+}
+
+.feedback__item {
+  position: relative;
+  margin-right: 90px;
+  padding-left: 50px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+.feedback__item--phone::before {
+  background-image: url("../../img/icon_mail.svg");
+}
+
+.feedback__item--mail::before {
+  background-image: url("../../img/icon_phone.svg");
+}
+
+.feedback__item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.feedback__link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba($black, 0.5%);
+  text-decoration: none;
+}
