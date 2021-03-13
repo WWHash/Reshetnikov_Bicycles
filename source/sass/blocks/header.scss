@@ -1,6 +1,8 @@
 //навигация
 .nav {
   position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .nav__list {
@@ -36,7 +38,7 @@
 }
 
 //лого
-.logo-btn__wrapper {
+.logo__wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
@@ -75,6 +77,17 @@
     background-color: $bg-green;
     border: none;
     cursor: pointer;
+  }
+
+  .nav--closed .nav__btn::before {
+    position: absolute;
+    top: 17px;
+    right: 14px;
+    width: 22px;
+    height: 2px;
+    content: "";
+    background-color: $black;
+    box-shadow: 0 7px 0 0 $black, 0 14px 0 0 $black;
   }
 }
 
