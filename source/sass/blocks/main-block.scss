@@ -16,6 +16,7 @@
 .main-block__inner {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .intro {
@@ -59,6 +60,16 @@
   margin-bottom: 20px;
   font-size: 15px;
   line-height: 24px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $bg-green;
+  }
+}
+
+.form__btn:hover,
+.form__btn:focus {
+  background-color: rgba($bg-green, 0.5%);
 }
 
 //tablet
@@ -114,5 +125,29 @@
   .form {
     width: 321px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-block {
+    background-image: url("../../img/bg_bike_mobile.jpg");
+  }
+
+  .intro {
+    margin-bottom: 72px;
+    padding-top: 35px;
+  }
+
+  .intro__desc {
+    padding: 0 20px;
+  }
+
+  .form__title {
+    padding: 0 21px;
+    margin-bottom: 21px;
+  }
+
+  .form {
+    width: 288px;
   }
 }

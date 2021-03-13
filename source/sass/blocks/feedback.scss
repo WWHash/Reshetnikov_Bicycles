@@ -42,3 +42,16 @@
   color: rgba($black, 0.5%);
   text-decoration: none;
 }
+
+//mobile
+@media (max-width: $mobile-width) {
+  .feedback__list {
+    flex-direction: column;
+  }
+
+  .feedback__item {
+    align-self: center;
+    margin-right: 0;
+    margin-bottom: 22px;
+  }
+}

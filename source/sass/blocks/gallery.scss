@@ -1,6 +1,6 @@
 .gallery {
   padding-top: 150px;
-  margin-bottom: 149px;
+  padding-bottom: 149px;
   background-color: $bg-grey;
 }
 
@@ -52,6 +52,7 @@
   text-align: center;
 }
 
+//tablet
 @media (max-width: $tablet-width) {
   .gallery {
     padding-top: 49px;
@@ -81,5 +82,17 @@
   .gallery__photo {
     width: 270px;
     height: 300px;
+  }
+}
+
+//mobile
+@media (max-width: $mobile-width) {
+  .gallery {
+    margin-bottom: 12px;
+  }
+
+  .gallery__item {
+    margin-right: 0;
+    margin-bottom: 42px;
   }
 }
