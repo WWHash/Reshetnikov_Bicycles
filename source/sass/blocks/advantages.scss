@@ -50,7 +50,7 @@
   text-align: center;
 }
 
-
+//tablet
 @media (max-width: $tablet-width) {
   .advantages {
     margin-bottom: 28px;
@@ -68,5 +68,26 @@
 
   .advantages__item:nth-child(2n) {
     margin-right: 0;
+  }
+}
+
+//mobile
+@media (max-width: $mobile-width) {
+  .advantages {
+    margin-bottom: 37px;
+  }
+
+  .advantages__list {
+    padding: 0 24px;
+  }
+
+  .advantages__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 39px;
+  }
+
+  .advantages__content {
+    font-size: 18px;
   }
 }

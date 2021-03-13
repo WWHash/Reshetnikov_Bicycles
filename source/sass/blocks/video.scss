@@ -1,9 +1,9 @@
 .video {
-  position: relative;
   background-color: $bg-black;
 }
 
 .video__inner {
+  position: relative;
   min-height: 706px;
   margin-bottom: 250px;
 }
@@ -20,8 +20,8 @@
 }
 
 .video__desc {
-  margin: 0;
-  padding: 0 277px;
+  width: 340px;
+  margin: 0 auto;
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
@@ -32,28 +32,12 @@
 .video__content {
   position: absolute;
   top: 283px;
-  //right: 50%;
-  margin: 0 auto;
-
-  &::before {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    content: url("../../img/play_icon_desktop.svg");
-    left: 432px;
-    top: 229px;
-    width: 65px;
-    height: 65px;
-    background-color: $bg-green;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+  //margin: 0 auto;
 }
 
-.video__content:hover::before {
-  background-color: red;
-}
+// .video__content:hover::before {
+//   background-color: red;
+// }
 
 @media (max-width: $tablet-width) {
   .video__inner {
@@ -68,15 +52,42 @@
   }
 
   .video__desc {
-    padding: 0 160px;
+    width: 429px;
   }
 
   .video__content {
     top: 216px;
+    right: 17%;
   }
 
   .video__content img {
     width: 503px;
     height: 282px;
+  }
+}
+
+//mobile
+@media (max-width: $mobile-width) {
+  .video__inner {
+    min-height: 383px;
+    margin-bottom: 120px;
+  }
+
+  .video__title {
+    padding-top: 85px;
+  }
+
+  .video__desc {
+    width: 290px;
+  }
+
+  .video__content {
+    top: 272px;
+    right: 5%;
+  }
+
+  .video__content img {
+    width: 288px;
+    height: 161px;
   }
 }
