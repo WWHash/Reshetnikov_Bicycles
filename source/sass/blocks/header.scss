@@ -131,6 +131,15 @@
     border: none;
     cursor: pointer;
     outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($bg-green, 0.5%);
+    }
+
+    &:active {
+      background-color: rgba($bg-green, 0.2%);
+    }
   }
 
   .nav--opened .nav__btn {
