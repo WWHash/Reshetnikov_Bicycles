@@ -5,6 +5,11 @@
   flex-direction: column-reverse;
 }
 
+.nav__inner {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -61,13 +66,61 @@
     width: 100%;
   }
 
+  .nav--opened .nav__inner {
+    background-color: $white;
+  }
+
+  .nav--opened .logo__wrapper {
+    margin-bottom: 0;
+  }
+
   .nav__list {
     display: none;
+  }
+
+  .nav--opened .nav__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-top: 78px;
+    border: none;
+  }
+
+  .nav--opened .nav__item {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .nav--opened .nav__item:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  .nav--opened .nav__link {
+    display: block;
+    padding: 11px 16px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: $color-menu;
+    background-color: $bg-menu;
+
+    &:hover,
+    &:focus {
+      color: rgba($color-menu, 0.5%);
+    }
+
+    &:active {
+      color: rgba($color-menu, 0.2%);
+    }
   }
 
   .logo {
     margin-top: 25px;
     margin-left: 21px;
+  }
+
+  .nav--opened .logo {
+    display: none;
   }
 
   .nav__btn {
@@ -77,6 +130,37 @@
     background-color: $bg-green;
     border: none;
     cursor: pointer;
+    outline: none;
+  }
+
+  .nav--opened .nav__btn {
+    margin-left: auto;
+    background-color: transparent;
+    outline: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 23px;
+      right: 13px;
+      content: "";
+      width: 28px;
+      height: 1px;
+      background-color: rgba($color-menu, 0.2%);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: rgba($color-menu, 0.7%);
+    }
   }
 
   .nav--closed .nav__btn::before {
@@ -89,11 +173,16 @@
     background-color: $black;
     box-shadow: 0 7px 0 0 $black, 0 14px 0 0 $black;
   }
+
+  .nav--nojs .nav__btn {
+    display: none;
+  }
 }
+
 
 //mobile
 @media (max-width: $mobile-width) {
   .logo {
-    margin-left: 18px;
+    margin-left: 17px;
   }
 }

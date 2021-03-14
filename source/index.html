@@ -11,33 +11,33 @@
 
 <body class="page-body">
   <header class="page-header container">
-    <nav class="nav nav--closed">
+    <nav class="nav nav--closed nav--nojs">
+      <div class="nav__inner">
+        <div class="logo__wrapper">
+          <a class="logo" href="index.html">
+            <img src="img/logo.svg" width="67.6" height="20.28" alt="Логотип интернет-магазина «Велосипеды»" />
+          </a>
 
-      <div class="logo__wrapper">
-        <a class="logo" href="index.html">
-          <img src="img/logo.svg" width="67.6" height="20.28" alt="Логотип интернет-магазина «Велосипеды»" />
-        </a>
+          <button class="nav__btn">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
 
-        <button class="nav__btn">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="#advantages">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#gallery">Виды велосипедов</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#video">Видео про велосипеды</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
       </div>
-
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link nav__link--active" href="#advantages">О нас</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#gallery">Виды велосипедов</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#video">Видео про велосипеды</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#contacts">Контакты</a>
-        </li>
-      </ul>
-
     </nav>
   </header>
   <main class="page-main">
@@ -155,6 +155,7 @@
     </section>
 
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
