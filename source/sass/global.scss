@@ -40,15 +40,7 @@ img {
 //tablet
 @media (max-width: $tablet-width) {
   .container {
-    width: $tablet-width;
     padding-left: 0;
     padding-right: 0;
-  }
-}
-
-//mobile
-@media (max-width: $mobile-width) {
-  .container {
-    width: $mobile-width;
   }
 }

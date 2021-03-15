@@ -41,6 +41,15 @@
   line-height: 22px;
   color: rgba($black, 0.5%);
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.8%);
+  }
+
+  &:active {
+    color: rgba($black, 0.2%);
+  }
 }
 
 //mobile

@@ -1,11 +1,24 @@
 .video {
+  position: relative;
   background-color: $bg-black;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: $white;
+    content: "";
+  }
 }
 
 .video__inner {
   position: relative;
-  min-height: 706px;
-  margin-bottom: 250px;
+  padding-left: 256px;
+  padding-right: 256px;
+  min-height: 804px;
+  margin-bottom: 148px;
 }
 
 .video__title {
@@ -22,6 +35,7 @@
 .video__desc {
   width: 340px;
   margin: 0 auto;
+  margin-bottom: 56px;
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
@@ -30,19 +44,45 @@
 }
 
 .video__content {
-  position: absolute;
-  top: 283px;
-  //margin: 0 auto;
+  position: relative;
 }
 
-// .video__content:hover::before {
-//   background-color: red;
-// }
+.video__btn {
+  position: absolute;
+  top: 43.5%;
+  left: 46.5%;
+  width: 65px;
+  height: 65px;
+  background-color: $bg-green;
+  background-image: url("../../img/play_icon_desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  border-radius: 50%;
+  content: "";
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($bg-green, 0.7%);
+  }
+
+  &:active {
+    background-color: rgba($bg-green, 0.5%);
+  }
+}
 
 @media (max-width: $tablet-width) {
+  .video::before {
+    bottom: -9px;
+  }
+
   .video__inner {
+    padding-left: 133px;
+    padding-right: 133px;
     min-height: 413px;
-    margin-bottom: 155px;
+    margin-bottom: 65px;
   }
 
   .video__title {
@@ -52,25 +92,34 @@
   }
 
   .video__desc {
-    width: 429px;
-  }
-
-  .video__content {
-    top: 216px;
-    right: 17%;
+    width: 90%;
+    margin-bottom: 41px;
   }
 
   .video__content img {
-    width: 503px;
+    width: 100%;
     height: 282px;
+  }
+
+  .video__btn {
+    top: 33.5%;
+    left: 41.5%;
+    width: 90px;
+    height: 90px;
   }
 }
 
 //mobile
 @media (max-width: $mobile-width) {
+  .video::before {
+    bottom: -46px;
+  }
+
   .video__inner {
+    padding-left: 16px;
+    padding-right: 16px;
     min-height: 383px;
-    margin-bottom: 120px;
+    margin-bottom: 65px;
   }
 
   .video__title {
@@ -79,15 +128,19 @@
 
   .video__desc {
     width: 290px;
-  }
-
-  .video__content {
-    top: 272px;
-    right: 5%;
+    margin-bottom: 54px;
   }
 
   .video__content img {
-    width: 288px;
+    //width: 288px;
+    width: 100%;
     height: 161px;
+  }
+
+  .video__btn {
+    top: 28.5%;
+    left: 38.5%;
+    width: 65px;
+    height: 65px;
   }
 }
