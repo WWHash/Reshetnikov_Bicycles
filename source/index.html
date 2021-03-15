@@ -54,7 +54,8 @@
           <h2 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
           <form class="form" action="#" method="POST">
             <input class="form__input input" type="text" name="name" placeholder="Введите Ваше Имя" required>
-            <input class="form__input input" type="number" name="phone" placeholder="Введите Ваш номер телефона" required>
+            <input class="form__input input" type="number" name="phone" placeholder="Введите Ваш номер телефона"
+              required>
             <button class="form__btn btn">Подобрать велосипед мечты</button>
           </form>
         </section>
@@ -83,37 +84,42 @@
       </ul>
     </section>
 
-    <section id="gallery" class="gallery container">
-      <h2 class="gallery__title">Виды велосипедов</h2>
-      <ul class="gallery__list">
-        <li class="gallery__item gallery__item--1">
-          <picture>
-            <source media="(max-width: 768px)" srcset="img/gallery_1_tablet@1x.jpg 1x, img/gallery_1_tablet@2x.jpg 2x">
-            <img class="gallery__photo gallery__photo--1" src="img/gallery_1_desktop@1x.jpg"
-              srcset="img/gallery_1_desktop@1x.jpg 1x, img/gallery_1_desktop@2x.jpg 2x" width="342" height="503"
-              alt="Дорожный велосипед">
-          </picture>
-          <p class="gallery__desc">Дорожный велосипед</p>
-        </li>
-        <li class="gallery__item gallery__item--2">
-          <picture>
-            <source media="(max-width: 768px)" srcset="img/gallery_2_tablet@1x.jpg 1x, img/gallery_2_tablet@2x.jpg 2x">
-            <img class="gallery__photo" src="img/gallery_2_desktop@1x.jpg"
-              srcset="img/gallery_2_desktop@1x.jpg 1x, img/gallery_2_desktop@2x.jpg 2x" width="342" height="503"
-              alt="Горный велосипев">
-          </picture>
-          <p class="gallery__desc">Горный велосипед</p>
-        </li>
-        <li class="gallery__item gallery__item--3">
-          <picture>
-            <source media="(max-width: 768px)" srcset="img/gallery_3_tablet@1x.jpg 1x, img/gallery_3_tablet@2x.jpg 2x">
-            <img class="gallery__photo" src="img/gallery_3_desktop@1x.jpg"
-              srcset="img/gallery_3_desktop@1x.jpg 1x, img/gallery_3_desktop@2x.jpg 2x" width="342" height="503"
-              alt="Детский велосипед">
-          </picture>
-          <p class="gallery__desc">Детский велосипед</p>
-        </li>
-      </ul>
+    <section id="gallery" class="gallery">
+      <div class="gallery__inner container">
+        <h2 class="gallery__title">Виды велосипедов</h2>
+        <ul class="gallery__list">
+          <li class="gallery__item gallery__item--1">
+            <picture>
+              <source media="(max-width: 768px)"
+                srcset="img/gallery_1_tablet@1x.jpg 1x, img/gallery_1_tablet@2x.jpg 2x">
+              <img class="gallery__photo gallery__photo--1" src="img/gallery_1_desktop@1x.jpg"
+                srcset="img/gallery_1_desktop@1x.jpg 1x, img/gallery_1_desktop@2x.jpg 2x" width="342" height="503"
+                alt="Дорожный велосипед">
+            </picture>
+            <p class="gallery__desc">Дорожный велосипед</p>
+          </li>
+          <li class="gallery__item gallery__item--2">
+            <picture>
+              <source media="(max-width: 768px)"
+                srcset="img/gallery_2_tablet@1x.jpg 1x, img/gallery_2_tablet@2x.jpg 2x">
+              <img class="gallery__photo" src="img/gallery_2_desktop@1x.jpg"
+                srcset="img/gallery_2_desktop@1x.jpg 1x, img/gallery_2_desktop@2x.jpg 2x" width="342" height="503"
+                alt="Горный велосипев">
+            </picture>
+            <p class="gallery__desc">Горный велосипед</p>
+          </li>
+          <li class="gallery__item gallery__item--3">
+            <picture>
+              <source media="(max-width: 768px)"
+                srcset="img/gallery_3_tablet@1x.jpg 1x, img/gallery_3_tablet@2x.jpg 2x">
+              <img class="gallery__photo" src="img/gallery_3_desktop@1x.jpg"
+                srcset="img/gallery_3_desktop@1x.jpg 1x, img/gallery_3_desktop@2x.jpg 2x" width="342" height="503"
+                alt="Детский велосипед">
+            </picture>
+            <p class="gallery__desc">Детский велосипед</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="video" class="video">

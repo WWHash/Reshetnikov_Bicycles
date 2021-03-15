@@ -1,9 +1,13 @@
 .gallery {
+  background-color: $bg-grey;
+}
+
+.gallery__inner {
   padding-right: 157px;
   padding-left: 157px;
   padding-top: 150px;
   padding-bottom: 149px;
-  background-color: $bg-grey;
+
 }
 
 .gallery__title {
@@ -107,7 +111,7 @@
 
 //tablet
 @media (max-width: $tablet-width) {
-  .gallery {
+  .gallery__inner {
     padding-right: 89px;
     padding-left: 89px;
     padding-top: 49px;
@@ -165,7 +169,7 @@
 
 //mobile
 @media (max-width: $mobile-width) {
-  .gallery {
+  .gallery__inner {
     padding-right: 25px;
     padding-left: 25px;
     padding-bottom: 12px;
