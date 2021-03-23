@@ -10,11 +10,11 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header container">
+  <header class="page-header">
     <nav class="nav nav--closed nav--nojs">
       <div class="nav__inner">
-        <div class="logo__wrapper">
-          <a class="logo" href="index.html">
+        <div class="nav__wrapper">
+          <a class="logo">
             <img src="img/logo.svg" width="68" height="20" alt="Логотип интернет-магазина «Велосипеды»" />
           </a>
 
@@ -44,7 +44,7 @@
     <h1 class="visually-hidden">Интернет-магазин велосипедов</h1>
 
     <section class="main-block">
-      <div class="main-block__inner container">
+      <div class="main-block__inner">
         <div class="intro">
           <h2 class="intro__title">Мы продаем велосипеды</h2>
           <p class="intro__desc">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
@@ -85,7 +85,7 @@
     </section>
 
     <section id="gallery" class="gallery">
-      <div class="gallery__inner container">
+      <div class="gallery__inner">
         <h2 class="gallery__title">Виды велосипедов</h2>
         <ul class="gallery__list">
           <li class="gallery__item gallery__item--1">
@@ -102,9 +102,9 @@
             <picture>
               <source media="(max-width: 768px)"
                 srcset="img/gallery_2_tablet@1x.jpg 1x, img/gallery_2_tablet@2x.jpg 2x">
-              <img class="gallery__photo" src="img/gallery_2_desktop@1x.jpg"
-                srcset="img/gallery_2_desktop@1x.jpg 1x, img/gallery_2_desktop@2x.jpg 2x" width="342" height="503"
-                alt="Горный велосипев">
+              <img class="gallery__photo gallery__photo--2" src="img/gallery_2_desktop@1x.jpg"
+                srcset="img/gallery_2_desktop@1x.jpg 1x, img/gallery_2_desktop@2x.jpg 2x" width="342" height="566"
+                alt="Горный велосипед">
             </picture>
             <p class="gallery__desc">Горный велосипед</p>
           </li>
@@ -112,8 +112,8 @@
             <picture>
               <source media="(max-width: 768px)"
                 srcset="img/gallery_3_tablet@1x.jpg 1x, img/gallery_3_tablet@2x.jpg 2x">
-              <img class="gallery__photo" src="img/gallery_3_desktop@1x.jpg"
-                srcset="img/gallery_3_desktop@1x.jpg 1x, img/gallery_3_desktop@2x.jpg 2x" width="342" height="503"
+              <img class="gallery__photo gallery__photo--2" src="img/gallery_3_desktop@1x.jpg"
+                srcset="img/gallery_3_desktop@1x.jpg 1x, img/gallery_3_desktop@2x.jpg 2x" width="342" height="512"
                 alt="Детский велосипед">
             </picture>
             <p class="gallery__desc">Детский велосипед</p>
@@ -123,7 +123,7 @@
     </section>
 
     <section id="video" class="video">
-      <div class="video__inner container">
+      <div class="video__inner">
         <h2 class="video__title">Видео про велосипеды</h2>
         <p class="video__desc">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         <div class="video__content">
@@ -131,8 +131,9 @@
           <picture>
             <source media="(max-width: 320px)" srcset="img/video_mobile@1x.jpg 1x, img/video_mobile@2x.jpg 2x">
             <source media="(max-width: 768px)" srcset="img/video_tablet@1x.jpg 1x, img/video_tablet@2x.jpg 2x">
-            <img src="img/video_desktop@1x.jpg" srcset="img/video_desktop@1x.jpg 1x, img/video_desktop@2x.jpg 2x"
-              width="929" height="522" alt="Видео про велосипеды">
+            <img class="video__image" src="img/video_desktop@1x.jpg"
+              srcset="img/video_desktop@1x.jpg 1x, img/video_desktop@2x.jpg 2x" width="929" height="522"
+              alt="Видео про велосипеды">
           </picture>
         </div>
       </div>
@@ -151,15 +152,16 @@
     </section>
 
     <section class="feedback">
-      <h2 class="visually-hidden">Обратная связь</h2>
-      <ul class="feedback__list">
-        <li class="feedback__item feedback__item--phone">
-          <a class="feedback__link" href="mailto::puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-        </li>
-        <li class="feedback__item feedback__item--mail">
-          <a class="feedback__link" href="tel:+7(499)784-684-46">+7 (499)-784-684-46</a>
-        </li>
-      </ul>
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <ul class="feedback__list">
+          <li class="feedback__item feedback__item--phone">
+            <a class="feedback__link feedback__link--phone"
+              href="mailto::puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+          </li>
+          <li class="feedback__item feedback__item--mail">
+            <a class="feedback__link feedback__link--mail" href="tel:+7(499)784-684-46">+7 (499)-784-684-46</a>
+          </li>
+        </ul>
     </section>
 
   </footer>

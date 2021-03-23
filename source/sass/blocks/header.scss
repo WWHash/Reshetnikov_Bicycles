@@ -1,8 +1,7 @@
 //навигация
 .nav {
   position: absolute;
-  display: flex;
-  flex-direction: column-reverse;
+  width: 100%;
 }
 
 .nav__inner {
@@ -12,22 +11,37 @@
 
 .nav__list {
   display: flex;
+  width: 870px;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 22px 0 7px 22px;
+  margin: 0 auto;
+  padding: 0;
   list-style: none;
   border-bottom: 1px solid rgba($white, 0.2%);
 }
 
 .nav__item {
-  margin-right: 134px;
+  flex-grow: 1;
+}
+
+.nav__item:nth-child(2n) {
+  text-align: center;
+}
+
+.nav__item:nth-child(3n) {
+  text-align: center;
 }
 
 .nav__item:nth-child(4n) {
-  margin-right: 0;
+  text-align: right;
 }
 
 .nav__link {
+  position: relative;
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 9px;
+  padding-left: 22px;
+  padding-right: 25px;
   font-weight: 300;
   font-style: normal;
   font-size: 16px;
@@ -35,21 +49,39 @@
   color: rgba($white, 0.7%);
   text-decoration: none;
 
+  &::after {
+    position: absolute;
+    top: 39%;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgba($color-arrow, 0.5%);
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+    content: "";
+  }
+
   &:hover,
   &:focus {
     color: $white;
   }
 }
 
+.nav__link:hover::after {
+  border-color: $color-arrow;
+}
+
 //лого
-.logo__wrapper {
+.nav__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 25px;
 }
 
 .logo {
   display: block;
+  width: 880px;
   margin-top: 256px;
 }
 
@@ -59,22 +91,29 @@
 
 //tablet
 @media (max-width: $tablet-width) {
-  .nav {
-    display: flex;
+  .nav__wrapper {
     justify-content: space-between;
-    width: 100%;
   }
 
+  .nav__list {
+    width: 100%;
+    display: none;
+  }
+  //logo
+  .logo {
+    width: 100px;
+    margin-top: 25px;
+    margin-left: 21px;
+  }
+
+  //nav--opened
   .nav--opened .nav__inner {
+    flex-direction: column;
     background-color: $white;
   }
 
   .nav--opened .logo__wrapper {
     margin-bottom: 0;
-  }
-
-  .nav__list {
-    display: none;
   }
 
   .nav--opened .nav__list {
@@ -86,6 +125,7 @@
   }
 
   .nav--opened .nav__item {
+    text-align: left;
     margin-right: 0;
     margin-bottom: 30px;
   }
@@ -113,16 +153,12 @@
     }
   }
 
-  .logo {
-    margin-top: 25px;
-    margin-left: 21px;
-  }
-
   .nav--opened .logo {
     display: none;
   }
 
   .nav__btn {
+    position: relative;
     display: block;
     width: 50px;
     height: 50px;
@@ -171,6 +207,7 @@
     }
   }
 
+  //nav--closed
   .nav--closed .nav__btn::before {
     position: absolute;
     top: 17px;
@@ -182,8 +219,59 @@
     box-shadow: 0 7px 0 0 $black, 0 14px 0 0 $black;
   }
 
+  //Menu no--js
+  .nav--nojs {
+    position: relative;
+  }
+
+  .nav--nojs .nav__inner {
+    flex-direction: column;
+  }
+
   .nav--nojs .nav__btn {
     display: none;
+  }
+
+  .nav--nojs .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+    background-color: $white;
+  }
+
+  .nav--nojs .nav__item {
+    margin-bottom: 30px;
+  }
+
+  .nav--nojs .nav__item:nth-child(2n) {
+    text-align: left;
+  }
+
+  .nav--nojs .nav__item:nth-child(3n) {
+    text-align: left;
+  }
+
+  .nav--nojs .nav__item:nth-child(4n) {
+    text-align: left;
+  }
+
+  .nav--nojs .nav__link {
+    padding: 11px 16px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: $color-menu;
+    background-color: $bg-menu;
+
+    &:hover,
+    &:focus {
+      color: rgba($color-menu, 0.5%);
+    }
+
+    &:active {
+      color: rgba($color-menu, 0.2%);
+    }
   }
 }
 

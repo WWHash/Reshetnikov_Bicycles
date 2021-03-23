@@ -3,11 +3,18 @@
 }
 
 .page-body {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0;
   font-family: $font;
   background-color: $white;
+}
+
+.page-footer {
+  margin-top: auto;
+  padding-bottom: 98px;
 }
 
 img {
@@ -30,11 +37,20 @@ img {
 
 .container {
   max-width: 1440px;
+  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 280px;
-  padding-right: 280px;
+  padding-left: 150px;
+  padding-right: 150px;
   box-sizing: border-box;
+}
+
+//desktop min-width
+@media (max-width: $desktop-width) {
+  .container {
+    padding-left: 125px;
+    padding-right: 125px;
+  }
 }
 
 //tablet
