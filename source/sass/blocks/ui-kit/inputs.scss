@@ -1,22 +1,28 @@
-.input {
+input {
   display: block;
   width: 100%;
+  margin-bottom: 20px;
   padding: 11px 29px;
   color: rgba($color-input, 0.5%);
   border: 1px solid $bg-border;
+  font-size: 15px;
+  line-height: 24px;
   border-radius: 6px;
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $black;
+  }
 }
 
-.input--number {
-  margin: 0;
-  -moz-appearance:textfield;
-  -webkit-appearance: none;
+input[type="number"] {
+  appearance: none;
 }
 
 //tablet
 @media (max-width: $tablet-width) {
-  .input {
+  input {
     padding: 11px 22px;
   }
 }

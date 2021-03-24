@@ -19,12 +19,12 @@
   flex-wrap: wrap;
 }
 
-.intro {
+.main-block__intro {
   width: 556px;
   padding-top: 50px;
 }
 
-.intro__title {
+.main-block__intro h2 {
   margin: 0;
   margin-bottom: 25px;
   font-size: 46px;
@@ -33,7 +33,7 @@
   color: $white;
 }
 
-.intro__desc {
+.main-block__intro p {
   padding-right: 140px;
   margin: 0;
   font-weight: 300;
@@ -42,12 +42,13 @@
   color: rgba($white, 0.8%);
 }
 
+//form
 .main-block__form {
   width: 327px;
   margin-top: 5px;
 }
 
-.form__title {
+.main-block__form h2 {
   margin: 0;
   margin-bottom: 20px;
   font-weight: 600;
@@ -55,22 +56,6 @@
   line-height: 28px;
   color: $white;
   text-align: center;
-}
-
-.form__input {
-  margin-bottom: 20px;
-  font-size: 15px;
-  line-height: 24px;
-
-  &:hover,
-  &:focus {
-    border: 1px solid $black;
-  }
-}
-
-.form__btn:hover,
-.form__btn:focus {
-  background-color: rgba($bg-green, 0.5%);
 }
 
 //tablet
@@ -90,19 +75,19 @@
     display: block;
   }
 
-  .intro {
+  .main-block__intro {
     width: 100%;
     margin-bottom: 82px;
   }
 
-  .intro__title {
+  .main-block__intro h2 {
     margin-bottom: 18px;
     font-size: 30px;
     line-height: 42px;
     text-align: center;
   }
 
-  .intro__desc {
+  .main-block__intro p {
     padding: 0 150px;
     font-size: 18px;
     line-height: 32px;
@@ -115,7 +100,7 @@
     background-color: $white;
   }
 
-  .form__title {
+  .main-block__form h2 {
     padding: 0 212px;
     margin-bottom: 31px;
     font-size: 18px;
@@ -123,7 +108,7 @@
     color: $black;
   }
 
-  .form {
+  form {
     width: 321px;
     margin: 0 auto;
   }
@@ -134,21 +119,21 @@
     background-image: url("../img/bg_bike_mobile.jpg");
   }
 
-  .intro {
+  .main-block__intro {
     margin-bottom: 72px;
     padding-top: 35px;
   }
 
-  .intro__desc {
+  .main-block__intro p {
     padding: 0 20px;
   }
 
-  .form__title {
+  .main-block__form h2 {
     padding: 0 21px;
     margin-bottom: 21px;
   }
 
-  .form {
+  form {
     width: 288px;
   }
 }

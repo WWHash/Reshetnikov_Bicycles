@@ -14,7 +14,7 @@
     <nav class="nav nav--closed nav--nojs">
       <div class="nav__inner">
         <div class="nav__wrapper">
-          <a class="logo">
+          <a class="nav__logo">
             <img src="img/logo.svg" width="68" height="20" alt="Логотип интернет-магазина «Велосипеды»" />
           </a>
 
@@ -25,16 +25,16 @@
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link nav__link--active" href="#advantages">О нас</a>
+            <a class="nav__link nav__link--advantages" href="#advantages">О нас</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#gallery">Виды велосипедов</a>
+            <a class="nav__link nav__link--gallery" href="#gallery">Виды велосипедов</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#video">Видео про велосипеды</a>
+            <a class="nav__link nav__link--video" href="#video">Видео про велосипеды</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#contacts">Контакты</a>
+            <a class="nav__link nav__link--contacts" href="#contacts">Контакты</a>
           </li>
         </ul>
       </div>
@@ -45,17 +45,21 @@
 
     <section class="main-block">
       <div class="main-block__inner">
-        <div class="intro">
-          <h2 class="intro__title">Мы продаем велосипеды</h2>
-          <p class="intro__desc">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        <div class="main-block__intro">
+          <h2>Мы продаем велосипеды</h2>
+          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
 
         <section class="main-block__form">
-          <h2 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
-          <form class="form" action="#" method="POST">
-            <input class="form__input input" type="text" name="name" placeholder="Введите Ваше Имя" required>
-            <input class="form__input input input--number" type="number" name="phone" placeholder="Введите Ваш номер телефона"
-              required step="1" min="5" max="11">
+          <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
+          <form action="#" method="POST">
+            <label>
+              <input type="text" name="name" placeholder="Введите Ваше Имя" required>
+            </label>
+            <label for="">
+              <input type="number" name="phone" placeholder="Введите Ваш номер телефона" required step="1" min="5"
+                max="11">
+            </label>
             <button class="form__btn btn">Подобрать велосипед мечты</button>
           </form>
         </section>
@@ -63,60 +67,60 @@
     </section>
 
     <section id="advantages" class="advantages">
-      <h2 class="advantages__title">Несколько фактов о нас</h2>
+      <h2>Несколько фактов о нас</h2>
       <ul class="advantages__list">
         <li class="advantages__item">
-          <h3 class="advantages__intro">01</h3>
-          <p class="advantages__content">Самый широкий выбор велосипедов!</p>
+          <h3>01</h3>
+          <p>Самый широкий выбор велосипедов!</p>
         </li>
         <li class="advantages__item">
-          <h3 class="advantages__intro">02</h3>
-          <p class="advantages__content">Доставка велосипедов по всей России!</p>
+          <h3>02</h3lass=>
+            <p>Доставка велосипедов по всей России!</p>
         </li>
         <li class="advantages__item">
-          <h3 class="advantages__intro">03</h3>
-          <p class="advantages__content">Большой выбор крутых аксессуаров!</p>
+          <h3>03</h3>
+          <p>Большой выбор крутых аксессуаров!</p>
         </li>
         <li class="advantages__item">
-          <h3 class="advantages__intro">04</h3>
-          <p class="advantages__content">Профессиональные консультации!</p>
+          <h3>04</h3class=>
+            <p>Профессиональные консультации!</p>
         </li>
       </ul>
     </section>
 
     <section id="gallery" class="gallery">
       <div class="gallery__inner">
-        <h2 class="gallery__title">Виды велосипедов</h2>
+        <h2>Виды велосипедов</h2>
         <ul class="gallery__list">
           <li class="gallery__item gallery__item--1">
             <picture>
               <source media="(max-width: 768px)"
-                srcset="img/gallery_1_tablet@1x.jpg 1x, img/gallery_1_tablet@2x.jpg 2x">
-              <img class="gallery__photo gallery__photo--1" src="img/gallery_1_desktop@1x.jpg"
+                srcset="img/gallery_1_tablet@1x.webp 1x, img/gallery_1_tablet@2x.webp 2x">
+              <img src="img/gallery_1_desktop@1x.jpg"
                 srcset="img/gallery_1_desktop@1x.jpg 1x, img/gallery_1_desktop@2x.jpg 2x" width="342" height="503"
                 alt="Дорожный велосипед">
             </picture>
-            <p class="gallery__desc">Дорожный велосипед</p>
+            <p>Дорожный велосипед</p>
           </li>
           <li class="gallery__item gallery__item--2">
             <picture>
               <source media="(max-width: 768px)"
-                srcset="img/gallery_2_tablet@1x.jpg 1x, img/gallery_2_tablet@2x.jpg 2x">
-              <img class="gallery__photo gallery__photo--2" src="img/gallery_2_desktop@1x.jpg"
+                srcset="img/gallery_2_tablet@1x.webp 1x, img/gallery_2_tablet@2x.webp 2x">
+              <img src="img/gallery_2_desktop@1x.jpg"
                 srcset="img/gallery_2_desktop@1x.jpg 1x, img/gallery_2_desktop@2x.jpg 2x" width="342" height="566"
                 alt="Горный велосипед">
             </picture>
-            <p class="gallery__desc">Горный велосипед</p>
+            <p>Горный велосипед</p>
           </li>
           <li class="gallery__item gallery__item--3">
             <picture>
               <source media="(max-width: 768px)"
-                srcset="img/gallery_3_tablet@1x.jpg 1x, img/gallery_3_tablet@2x.jpg 2x">
-              <img class="gallery__photo gallery__photo--2" src="img/gallery_3_desktop@1x.jpg"
+                srcset="img/gallery_3_tablet@1x.webp 1x, img/gallery_3_tablet@2x.webp 2x">
+              <img src="img/gallery_3_desktop@1x.jpg"
                 srcset="img/gallery_3_desktop@1x.jpg 1x, img/gallery_3_desktop@2x.jpg 2x" width="342" height="512"
                 alt="Детский велосипед">
             </picture>
-            <p class="gallery__desc">Детский велосипед</p>
+            <p>Детский велосипед</p>
           </li>
         </ul>
       </div>
@@ -124,8 +128,8 @@
 
     <section id="video" class="video">
       <div class="video__inner">
-        <h2 class="video__title">Видео про велосипеды</h2>
-        <p class="video__desc">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         <div class="video__content">
           <button class="video__btn"><span class="visually-hidden">Пуск</span></button>
           <picture>
@@ -142,8 +146,8 @@
   <footer class="page-footer">
 
     <section id="contacts" class="contacts">
-      <h2 class="contacts__title">Как нас найти?</h2>
-      <p class="contacts__desc">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
 
       <div class="contacts__map">
         <iframe class="contacts__google"
@@ -152,16 +156,16 @@
     </section>
 
     <section class="feedback">
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <ul class="feedback__list">
-          <li class="feedback__item feedback__item--phone">
-            <a class="feedback__link feedback__link--phone"
-              href="mailto::puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-          </li>
-          <li class="feedback__item feedback__item--mail">
-            <a class="feedback__link feedback__link--mail" href="tel:+7(499)784-684-46">+7 (499)-784-684-46</a>
-          </li>
-        </ul>
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <ul class="feedback__list">
+        <li class="feedback__item feedback__item--phone">
+          <a class="feedback__link feedback__link--phone"
+            href="mailto::puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+        </li>
+        <li class="feedback__item feedback__item--mail">
+          <a class="feedback__link feedback__link--mail" href="tel:+7(499)784-684-46">+7 (499)-784-684-46</a>
+        </li>
+      </ul>
     </section>
 
   </footer>

@@ -3,7 +3,7 @@
   background-color: $white;
 }
 
-.advantages__title {
+.advantages h2 {
   margin: 0;
   margin-bottom: 49px;
   font-size: 30px;
@@ -30,7 +30,7 @@
   margin-right: 0;
 }
 
-.advantages__intro {
+.advantages__item h3 {
   margin: 0;
   margin-bottom: 15px;
   font-size: 28px;
@@ -40,7 +40,7 @@
   text-align: center;
 }
 
-.advantages__content {
+.advantages__item p {
   margin: 0;
   font-weight: normal;
   font-size: 22px;
@@ -55,7 +55,7 @@
     margin-bottom: 28px;
   }
 
-  .advantages__title {
+  .advantages h2 {
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 41px;
@@ -86,7 +86,7 @@
     margin-bottom: 39px;
   }
 
-  .advantages__content {
+  .advantages__item p {
     font-size: 18px;
   }
 }

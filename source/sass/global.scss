@@ -12,6 +12,10 @@
   background-color: $white;
 }
 
+.page-body--overflow-y {
+  overflow-y: hidden;
+}
+
 .page-footer {
   margin-top: auto;
   padding-bottom: 98px;
