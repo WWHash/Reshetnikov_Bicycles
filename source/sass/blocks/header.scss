@@ -49,27 +49,10 @@
   color: rgba($white, 0.7%);
   text-decoration: none;
 
-  &::after {
-    position: absolute;
-    top: 39%;
-    right: 20px;
-    width: 10px;
-    height: 10px;
-    border: 1px solid rgba($color-arrow, 0.5%);
-    border-left: none;
-    border-bottom: none;
-    transform: rotate(45deg);
-    content: "";
-  }
-
   &:hover,
   &:focus {
     color: $white;
   }
-}
-
-.nav__link:hover::after {
-  border-color: $color-arrow;
 }
 
 //лого
@@ -113,6 +96,7 @@
 
   .nav--opened .nav__inner {
     height: 100%;
+    overflow-y: scroll;
     flex-direction: column;
     background-color: $white;
   }
@@ -144,6 +128,19 @@
     background-color: $bg-menu;
     text-align: left;
 
+    &::after {
+      position: absolute;
+      top: 39%;
+      right: 20px;
+      width: 10px;
+      height: 10px;
+      border: 1px solid rgba($color-arrow, 0.5%);
+      border-left: none;
+      border-bottom: none;
+      transform: rotate(45deg);
+      content: "";
+    }
+
     &:hover,
     &:focus {
       color: rgba($color-menu, 0.5%);
@@ -152,6 +149,10 @@
     &:active {
       color: rgba($color-menu, 0.2%);
     }
+  }
+
+  .nav__link:hover::after {
+    border-color: $color-arrow;
   }
 
   .nav--opened .nav__logo {

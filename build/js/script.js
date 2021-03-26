@@ -3,6 +3,7 @@
 var navBtn = document.querySelector('.nav__btn');
 var nav = document.querySelector('.nav');
 var body = document.querySelector('.page-body');
+var links = document.querySelectorAll('.nav__link');
 
 nav.classList.remove('nav--nojs');
 
@@ -16,4 +17,12 @@ navBtn.addEventListener('click', function () {
     nav.classList.remove('nav--opened');
     body.classList.remove('page-body--overflow-y');
   }
+});
+
+links.forEach(function (link) {
+  link.addEventListener('click', function () {
+    nav.classList.remove('nav--opened');
+    nav.classList.add('nav--closed');
+    body.classList.remove('page-body--overflow-y');
+  });
 });
